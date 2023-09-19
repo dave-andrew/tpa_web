@@ -1,0 +1,47 @@
+.edit-profile-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 800px;
+    z-index: 1001;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.edit-profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-close-btn {
+    position: fixed;
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    color: black;
+    cursor: pointer;
+}
+
+.edit-profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.edit-profile-field {
+    width: 85%;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    background-color: rgb(231, 231, 231);
+    border-radius: 6px;
+    font-weight: bold;
+}

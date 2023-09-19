@@ -1,0 +1,82 @@
+type Post {
+    ID: ID!
+    Description: String!
+    Likes: Int!
+    Shares: Int!
+    ImageURL: [String!]!
+    UserID: String!
+    User: User!
+    createdAt: Time!
+    Visibility: String!
+}
+
+type GroupPost {
+    ID: ID!
+    Description: String!
+    Likes: Int!
+    Shares: Int!
+    ImageURL: [String!]!
+    UserID: String!
+    User: User!
+    createdAt: Time!
+    Visibility: String!
+    GroupID: String!
+    Group: Group!
+}
+
+input NewGroupPost {
+    Description: String!
+    ImageURL: [String!]!
+    Visibility: String!
+    GroupID: String!
+}
+
+input NewPost {
+    Description: String!
+    ImageURL: [String!]!
+    Visibility: String!
+}
+
+type Comment {
+    ID: ID!
+    PostID: String!
+    Post: Post!
+    CommentID: String
+    UserID: String!
+    User: User!
+    Message: String!
+    createdAt: Time!
+}
+
+extend type Query {
+    getAllPost(offset: Int!): [Post!]! @auth
+    getPostComment(postID: String!): [Comment!]! @auth
+    getReply(postID: String!, commentID: String!): [Comment!]! @auth
+    countComment(postID: String!): Int! @auth
+    searchPost(search: String!, offset: Int!): [Post!]! @auth
+
+    getAllGroupPost(offset: Int!): [GroupPost!]! @auth
+    getGroupPostComment(postID: String!): [GroupComment!]! @auth
+    getGroupReply(postID: String!, commentID: String!): [GroupComment!]! @auth
+    countGroupComment(postID: String!): Int! @auth
+    searchGroupPost(search: String!, offset: Int!): [GroupPost!]! @auth
+
+    getUserPost(userid: String!, offset: Int!): [Post!]! @auth
+    getGroupPost(groupid: String!, offset: Int!): [GroupPost!]! @auth
+
+    getPostByID(postID: String!): Post! @auth
+    getGroupPostByID(postID: String!): GroupPost! @auth
+}
+
+extend type Mutation {
+    createPost(post: NewPost!): Post! @auth
+    createComment(message: String!, postID: String!, commentID: String): Comment! @auth
+    deletePost(postID: String!): String! @auth
+
+    createGroupPost(post: NewGroupPost!): GroupPost! @auth
+    createGroupComment(message: String!, postID: String!, commentID: String): GroupComment! @auth
+    deleteGroupPost(postID: String!): String! @auth
+
+    sharePost(postID: String!): String! @auth
+    shareGroupPost(postID: String!): String! @auth
+}

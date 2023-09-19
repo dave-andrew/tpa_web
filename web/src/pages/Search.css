@@ -1,0 +1,145 @@
+.search-container {
+    position: relative;
+    display: flex;
+}
+
+.search-side-bar {
+    position: fixed;
+    background-color: white;
+    width: 25%;
+    height: 100vh;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-side-header {
+    padding-top: 70px;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.search-side-content {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    padding-left: 35px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-side-content:hover {
+    background-color: #f5f5f5;
+}
+
+.search-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-side-icon {
+    width: 70%;
+    height: 70%;
+}
+
+.search-side-content .active {
+    background-color: #f5f5f5;
+}
+
+.search-content {
+    padding-top: 53px;
+    margin-left: 25%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.search-result {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-people {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.add-friend-btn {
+    border: none;
+    background-color: rgb(196, 240, 255);
+    padding: 7px 20px;
+    border-radius: 4px;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 100%;
+    border: none;
+    padding: 7px;
+    background-color: rgb(104, 104, 255);
+    color: white;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.share-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.search-post-container {
+    width: 62%;
+    margin: 0 auto;
+}
+
+.user-loading-skeleton,
+.group-loading-skeleton {
+    width: 62%;
+    margin: 0 auto;
+    border-radius: 8px;
+    height: 50px;
+    background-color: lightgray;
+    position: relative;
+}
+
+.user-loading-skeleton {
+    margin-top: 70px;
+}
+
+.group-loading-skeleton {
+    margin-top: 20px;
+}
+
+.white-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, white, transparent);
+    animation: swipe 1s infinite alternate;
+}
+
+@keyframes swipe {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

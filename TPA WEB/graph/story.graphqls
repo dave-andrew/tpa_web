@@ -1,0 +1,20 @@
+
+type Story {
+    ID: ID!
+    UserID: String!
+    User: User!
+    StoryURL: String
+    Font: String
+    Color: String
+    Text: String
+    createdAt: Time!
+}
+
+extend type Query {
+    getUserStory(userid: String!): [Story!]! @auth
+    isUserHaveStory(userid: String!): Boolean! @auth
+}
+
+extend type Mutation {
+    createStory(StoryURL: String, Font: String, Color: String, Text: String): String!
+}

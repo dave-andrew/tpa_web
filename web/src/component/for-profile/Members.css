@@ -1,0 +1,62 @@
+.group-role-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.group-admins {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    padding-left: 35px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgb(183, 183, 183);
+    font-size: 17px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.name-font {
+    font-size: 16px;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.request-accept {
+    border: none;
+    background-color: rgb(52, 160, 255);
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.request-decline {
+    border: none;
+    background-color: rgb(176, 176, 176);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.request-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.promote-btn {
+    border: none;
+    background-color: rgb(52, 160, 255);
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,32 @@
+
+type Chat {
+    ID: ID!
+    UserID: String!
+    User: User!
+    ReceiverID: String!
+    Receiver: User!
+}
+
+type GroupChat {
+    ID: ID!
+    GroupID: String!
+    Group: Group!
+    Users: [User!]!
+}
+
+extend type Query {
+    getChat(ID: ID!): Chat!
+    getUserChat: [Chat!]!
+    checkChat(user1d: String!): Chat
+
+    getUserGroupChat: [GroupChat!]!
+    isUserInGroupChat(chatid: String!): GroupChat!
+    getGroupChat(groupid: String!): GroupChat!
+}
+
+extend type Mutation {
+    createChat(User1ID: String!): Chat!
+
+    createGroupChat(groupid: String!, users: [String!]!): GroupChat!
+    addGroupUser(groupid: String!, User: String!): GroupChat!
+}

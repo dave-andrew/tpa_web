@@ -1,0 +1,36 @@
+
+type Reel {
+    ID: ID!
+    Url: String!
+    UserID: String!
+    User: User!
+    CreatedAt: Time!
+    ReelLike: Int!
+    Share: Int!
+}
+
+type ReelComment {
+    ID: ID!
+    ReelID: String!
+    Reel: Reel!
+    CommentID: String
+    UserID: String!
+    User: User!
+    Message: String!
+    createdAt: Time!
+}
+
+extend type Query {
+    getReels: [Reel!]!
+    getReelComments(reelID: String!): [ReelComment!]!
+    reelCountComment(reelID: String!): Int!
+    getReelCommentReply(reelID: String!, commentID: String!): [ReelComment!]!
+
+    getUserReel(userID: String!): [Reel!]!
+}
+
+extend type Mutation {
+    createReel(url: String!): Reel!
+    shareReel(reelID: String!): Reel!
+    createReelComment(reelID: String!, commentID: String, message: String!): ReelComment!
+}

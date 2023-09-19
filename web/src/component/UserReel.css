@@ -1,0 +1,9 @@
+.video-preview {
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 450ms;
+    box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+}

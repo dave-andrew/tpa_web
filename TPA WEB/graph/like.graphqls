@@ -1,0 +1,43 @@
+
+
+type Like {
+    UserID: String!
+    User: User!
+    PostID: String!
+    Post: Post!
+    CreatedAt: Time!
+}
+
+type ReelLike {
+    UserID: String!
+    User: User!
+    ReelID: String!
+    Reel: Reel!
+    CreatedAt: Time!
+}
+
+type GroupLike {
+    UserID: String!
+    User: User!
+    GroupPostID: String!
+    GroupPost: GroupPost!
+    CreatedAt: Time!
+}
+
+extend type Query {
+    getLikes: [Like]! @auth
+    getLike(postId: ID!): Boolean! @auth
+    getReelLikes: [ReelLike]! @auth
+    getReelLike(reelId: ID!): Boolean! @auth
+    getGroupLikes(postid: ID!): [Like]! @auth
+    getGroupLike(postId: ID!): Boolean! @auth
+}
+
+extend type Mutation {
+    likePost(postId: ID!): String! @auth
+    likeReel(reelId: ID!): String! @auth
+    likeGroupPost(postId: ID!): String! @auth
+    unlikePost(postId: ID!): String! @auth
+    unlikeReel(reelId: ID!): String! @auth
+    unlikeGroupPost(postId: ID!): String! @auth
+}

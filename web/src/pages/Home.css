@@ -1,0 +1,165 @@
+* {
+    font-size: 13px;
+}
+
+.nav {
+    position: fixed;
+}
+
+.grid {
+    display: grid;
+}
+
+main {
+    grid-template-columns: 20% 60% 20%;
+}
+
+.left-grid {
+    position: fixed;
+    width: 30%;
+}
+
+.center-grid {
+    width: 100%;
+}
+
+.right-grid {
+    position: fixed;
+    margin-left: calc(70% + 30px);
+    justify-self: left;
+}
+
+.bg {
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.f-1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #ccc;
+}
+
+.post-box {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    margin-left: 10px;
+    padding: 4px 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.size-10 {
+    font-size: 10px;
+}
+
+.mt-3 {
+    margin-top: -3px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.side-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.side-btn .icon {
+    width: 22px;
+    height: 22px;
+    color: rgb(37, 37, 104);
+}
+
+.side-btn:hover {
+    background-color: #ccc;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.story {
+    overflow-x: auto;
+}
+
+.story-container {
+    border-radius: 8px;
+    height: 160px;
+    width: 100px;
+}
+
+.story-box {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+}
+
+.overlay-img {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+    font-weight: bold;
+    text-align: center;
+    object-fit: cover;
+    color: lightblue;
+    z-index: 2;
+}
+
+.white-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}

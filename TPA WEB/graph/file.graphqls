@@ -1,0 +1,21 @@
+
+type File {
+    ID: ID!
+    Name: String!
+    Path: String!
+    Type: String!
+    UserID: String!
+    User: User!
+    GroupID: String!
+    Group: Group!
+    CreatedAt: Time!
+}
+
+extend type Query {
+    getGroupFiles(groupid: String!): [File!]!
+}
+
+extend type Mutation {
+    uploadGroupFile(name: String!, path: String!, type: String!, groupid: String!): File!
+    deleteGroupFile(fileid: String!): Boolean!
+}

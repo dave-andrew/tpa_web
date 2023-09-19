@@ -1,0 +1,51 @@
+
+.notification-container {
+    padding-top: 70px;
+}
+
+.notification-box {
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 15px;
+    width: 600px;
+    border-radius: 8px 8px 8px 8px;
+    margin: 0 auto;
+}
+
+.notification-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.notification-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.notification-content:hover {
+    background-color: #f1f1f1;
+}
+
+.notification-content .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 191, 255);
+}
+
+.notif-hour {
+    font-size: 10px;
+    color: rgb(79, 79, 255);
+}
+
+b {
+    font-size: 14px;
+}

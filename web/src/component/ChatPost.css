@@ -1,0 +1,26 @@
+.chat-post-bg {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.chat-post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.chat-post-description {
+    padding: 10px;
+}
+
+.chat-post-group-name {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.chat-post-user-name {
+    font-size: 11px;
+}

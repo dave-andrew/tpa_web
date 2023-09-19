@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: -30px;
+}
+
+h4 {
+    margin: 10px 0;
+}
+
+.modal-container {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: #333;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px 0;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.mlr-10 {
+    margin: 0 10px;
+}
+
+.align-left {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+h3 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.width {
+    width: 90%;
+}
+
+.max-width {
+    width: 100%;
+}
+
+.text-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-left: -10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.content-center {
+    justify-content: center;
+}
+
+.gap {
+    gap: 1rem;
+}
+
+.mg-top {
+    margin-top: 20px;
+}
+
+.name-input {
+    flex: 1;
+}
+
+.pr-10 {
+    margin-right: -10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.padding {
+    padding: 10px 50px;
+}
+
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.radio-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-custom::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.radio-label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+.radio-custom::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn {
+    border: transparent;
+    background-color: yellowgreen;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.text-link {
+    font-size: small;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn-login {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 6px 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: transparent;
+}
+
+.toRegis {
+    padding: 10px 20px;
+    font-size: smaller;
+}
+
+.sm {
+    font-size: smaller;
+    color: #ccc;
+    margin-top: -20px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.btn-gray {
+    border: transparent;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-blue {
+    border: transparent;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+p {
+    font-size: 15px;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #007bff;
+}

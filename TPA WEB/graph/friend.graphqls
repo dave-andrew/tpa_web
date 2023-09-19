@@ -1,0 +1,28 @@
+
+
+type Friend {
+    UserID: String!
+    User: User!
+    FriendID: String!
+    Friend: User!
+    Status: Boolean!
+}
+
+extend type Query {
+    getFriends: [Friend!] @auth
+    getMutual(friendid: String!): [User!]! @auth
+    getStatus(friendid: String!): Friend! @auth
+    getRequestFriend: [Friend!]! @auth
+    getRecomFriend: [User!]! @auth
+    getFriendUser: [User!]! @auth
+
+    countFriend: Int! @auth
+
+    getUserFriend(userid: String!): [User!]! @auth
+}
+
+extend type Mutation {
+    addFriend(friendid: String!): Friend! @auth
+    acceptFriend(friendid: String!): Friend! @auth
+    removeFriend(friendid: String!): Friend! @auth
+}

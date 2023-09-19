@@ -1,0 +1,21 @@
+.discussion-grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 15px;
+}
+
+.column-1 {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.column-2 {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}

@@ -1,0 +1,69 @@
+type Group {
+    ID: ID!
+    Name: String!
+    Visibility: String!
+    ImageURL: String
+    Admins: [User!]!
+    Members: [User!]!
+}
+
+type GroupComment {
+    ID: ID!
+    GroupPostID: String!
+    GroupPost: GroupPost!
+    GroupCommentID: String
+    UserID: String!
+    User: User!
+    Message: String!
+    createdAt: Time!
+}
+
+type GroupPending {
+    ID: ID!
+    GroupID: String!
+    Group: Group!
+    SenderID: String!
+    Sender: User!
+    ReceiverID: String!
+    Receiver: User!
+}
+
+type GroupRequest {
+    GroupID: String!
+    Group: Group!
+    UserID: String!
+    User: User!
+}
+
+extend type Query {
+    getUserGroups: [Group!]! @auth
+    getGroup(id: ID!): Group! @auth
+    getGroups: [Group!]! @auth
+    searchGroups(search: String!): [Group!]! @auth
+
+    checkUserRole(groupid: String!): String! @auth
+
+    checkGroupRequest(groupid: String!): String! @auth
+    checkGroupInvite(groupid: String!): String! @auth
+
+    getGroupRequest(groupid: String!) : [GroupRequest!]! @auth
+}
+
+extend type Mutation {
+    createGroup(name: String!, visibility: String!, members: [String]): Group! @auth
+    updateGroup(id: ID!, name: String!, visibility: String!): Group! @auth
+    updateGroupImage(id: ID!, image: String!): Group! @auth
+    leaveGroupMember(id: ID!): String! @auth
+    leaveGroupAdmin(id: ID!): String! @auth
+
+    inviteGroup(groupid: String!, receiverid: String!): GroupPending! @auth
+    rejectInvite(groupid: String!, senderid: String!): GroupPending! @auth
+    acceptInvite(groupid: String!, senderid: String!): GroupPending! @auth
+
+    requestGroup(groupid: String!): GroupRequest! @auth
+    rejectRequest(groupid: String!, userid: String!): GroupRequest! @auth
+    acceptRequest(groupid: String!, userid: String!): GroupRequest! @auth
+
+    promoteAdmin(groupid: String!, userid: String!): String! @auth
+    kickMember(groupid: String!, userid: String!): String! @auth
+}

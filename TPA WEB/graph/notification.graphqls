@@ -1,0 +1,34 @@
+
+
+type Notification {
+    ID: ID!
+    UserID: String!
+    User: User
+    SenderID: String!
+    Sender: User
+    Message: String!
+    Status: Boolean!
+    CreatedAt: Time!
+}
+
+type BlockNotification {
+    ID: ID!
+    UserID: String!
+    User: User
+    BlockedID: String!
+    Blocked: User
+}
+
+extend type Query {
+    getNotification: [Notification!]! @auth
+    countNotification: Int! @auth
+
+    getBlockStatus(userid: String!): Boolean! @auth
+}
+
+extend type Mutation {
+    createNotification(userid: String!, message: String!): Notification @auth
+
+    blockUser(userid: String!): BlockNotification @auth
+    unblockUser(userid: String!): BlockNotification @auth
+}

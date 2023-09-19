@@ -1,0 +1,71 @@
+.grid-layout {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    z-index: 5;
+}
+
+.side-bar {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.side-bar .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+.side-bar .content h2 {
+    margin-top: 65px;
+    font-size: 24px;
+    padding: 10px 30px;
+    border: none;
+    color: #333;
+}
+
+.side-bar .content .side-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.side-bar .content .side-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.side-bar-icon {
+    width: 27px;
+    height: 27px;
+    color: rgb(37, 37, 104);
+}
+
+.font-17 {
+    font-size: 16px;
+}
+
+.mt-65 {
+    margin-top: 65px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.ml-40 {
+    margin-left: 40px;
+}
+
+.friend-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

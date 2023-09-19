@@ -1,0 +1,105 @@
+.reel-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.reel-back-btn {
+    color: white;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.reel-contents {
+    display: flex;
+}
+
+.reel-contents .reel {
+    position: absolute;
+    height: 650px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(51, 48, 48);
+    border-radius: 8px;
+}
+
+.engagements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    color: white;
+    gap: 25px;
+}
+
+.engagement-btn {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.user-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 9%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.reel-prev-btn {
+    width: 30px;
+    height: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.reel-next-btn {
+    width: 30px;
+    height: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.video-timeline {
+    position: absolute;
+    bottom: 21px;
+    left: 50.7%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.video-timeline::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0px;
+    height: 0px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}

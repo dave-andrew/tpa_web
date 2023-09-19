@@ -1,0 +1,91 @@
+.friend-list-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+}
+
+.bg-modal {
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+}
+
+.friend-list-modal-close {
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    color: black;
+    cursor: pointer;
+}
+
+.friend-list-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.friend-list-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.friend-list {
+    height: 380px;
+    overflow-y: auto;
+}
+
+.padding-friend-item {
+    padding: 10px 0;
+    padding-left: 25px;
+}
+
+.friend-checkbox {
+    width: 15px;
+    height: 15px;
+    margin-right: 25px;
+}
+
+.friend-invite-btn {
+    border: none;
+    background-color: rgb(111, 111, 253);
+    padding: 10px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.friend-cancel-btn {
+    border: none;
+    background-color: rgb(178, 178, 178);
+    padding: 10px 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 20px;
+}

@@ -1,0 +1,53 @@
+scalar Time
+
+directive @auth on INPUT_FIELD_DEFINITION | FIELD_DEFINITION
+
+type User {
+    ID: ID!
+    Name: String!
+    Surname: String!
+    Email: String!
+    DOB: Time!
+    Gender: String!
+    Password: String!
+    Approved: Boolean!
+    ProfilePicture: String!
+    HomePicture: String!
+}
+
+input NewUser {
+    Name: String!
+    Surname: String!
+    Email: String!
+    DOB: Time!
+    Gender: String!
+    Password: String!
+}
+
+input inputLogin {
+    Email: String!
+    Password: String!
+}
+
+type Query {
+    getUser: User! @auth
+    getAllUser: [User!]!
+    login(input: inputLogin!): String!
+    ValidateEmail(token: String!): Boolean!
+    changePasswordEmail(email: String!): String!
+    validateToken(token: String!): Boolean!
+    getUserByName(name: String!): User! @auth
+    searchUser(search: String!): [User!]! @auth
+
+    validateeToken(token: String!): Boolean!
+}
+
+type Mutation {
+    createUser(newUser: NewUser!): String!
+    updateUser(newUser: NewUser!): User! @auth
+    changePassword(token: String!, oldpass: String!, pass: String!): String!
+    addProfilePicture(url: String!): String! @auth
+    addHomePicture(url: String!): String! @auth
+
+    updateUserProfile(name: String!, surname: String!, dob: Time!): User! @auth
+}

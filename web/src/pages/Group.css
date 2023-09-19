@@ -1,0 +1,191 @@
+.group-container {
+    position: relative;
+}
+
+.group-side-bar {
+    position: fixed;
+    padding-top: 70px;
+    background-color: white;
+    width: 22%;
+    height: 100vh;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.group-side-header {
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.group-side {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    padding-left: 35px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.group-side:hover {
+    background-color: #f1f1f1;
+}
+
+.group-icons {
+    width: 25px;
+    height: 25px;
+}
+
+.create-group-btn {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    background-color: rgb(154, 154, 255);
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.create-group-btn:hover {
+    background-color: rgb(139, 139, 255);
+}
+
+.group-list-header {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.group-list {
+    display: flex;
+    padding: 10px 20px;
+    padding-left: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+.group-list:hover {
+    background-color: #f1f1f1;
+}
+
+.group-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: #c3c3c3;
+}
+
+.group-name {
+    font-size: 14px;
+}
+
+.last-active {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.group-list-container {
+    height: 270px;
+    overflow-y: auto;
+}
+
+.group-post-content {
+    padding-top: 70px;
+    width: 50%;
+    height: 100vh;
+    margin: 0;
+    margin-left: 520px;
+}
+
+.group-profile {
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    flex: 1;
+    margin-left: 22%;
+    height: 347px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(183, 183, 183);
+}
+
+.group-home-picture {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.group-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    padding-left: 35px;
+    margin-top: 5px;
+}
+
+.group-profile-name {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.group-invite-btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(129, 129, 255);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.group-profile-menu {
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.group-profile-menu:hover {
+    background-color: #f1f1f1;
+}
+
+.group-post-box {
+    padding: 10px 20px;
+    padding-left: 35px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgb(183, 183, 183);
+    background-color: white;
+}
+
+.group-post-name {
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.group-post-name:hover {
+    text-decoration: underline;
+}
+
+.group-post-user {
+    font-size: 12px;
+}
+
+.group-post-user:hover {
+    text-decoration: underline;
+}
+
+.group-leave-btn {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 129, 129);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
